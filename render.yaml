@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: bunnyskids-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://bunnyskids_user:EMknFIjRw11ssgFDjBt9PG1P9Qrqch2N@dpg-d74gfo94tr6s73coprsg-a.oregon-postgres.render.com/bunnyskids
+      - key: NODE_ENV
+        value: production
+      - key: ALLOWED_ORIGIN
+        value: "*"
+      - key: ADMIN_EMAIL
+        value: camanishagrawal76@gmail.com
+      - key: ADMIN_WHATSAPP
+        value: "whatsapp:+918767329849"
+      - key: TWILIO_WHATSAPP_FROM
+        value: "whatsapp:+14155238886"
+      # ⚠️ Add these manually in Render dashboard (sensitive keys):
+      # GMAIL_USER, GMAIL_APP_PASSWORD, TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, ADMIN_TOKEN
